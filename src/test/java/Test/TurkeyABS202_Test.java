@@ -26,7 +26,7 @@ public class TurkeyABS202_Test extends Base {
         Actions actions = new Actions(driver);
         actions.moveToElement(leftmenu.ABS202()).click().build().perform();
         Thread.sleep(2000);
-        System.out.println(absline.title20().getText()+ " Daily");
+        System.out.println(absline.title().getText()+ " Daily");
         Thread.sleep(2000);
         actions.moveToElement(absline.TabTInsertion()).click().build().perform();
 
@@ -66,7 +66,7 @@ public class TurkeyABS202_Test extends Base {
         Thread.sleep(2000);
         try {
 
-            System.out.println(absline.title20().getText()+ " Daily");
+            System.out.println(absline.title().getText()+ " Daily");
             Thread.sleep(2000);
             Actions actions = new Actions(driver);
             actions.moveToElement(absline.TabWinding()).click().build().perform();
@@ -106,7 +106,7 @@ public class TurkeyABS202_Test extends Base {
         Thread.sleep(2000);
         try {
 
-            System.out.println(absline.title20().getText()+ " Daily");
+            System.out.println(absline.title().getText()+ " Daily");
             Thread.sleep(2000);
             Actions actions = new Actions(driver);
             actions.moveToElement(absline.TabCaseAssembly()).click().build().perform();
@@ -146,7 +146,7 @@ public class TurkeyABS202_Test extends Base {
         Thread.sleep(2000);
         try {
 
-            System.out.println(absline.title20().getText()+ " Daily");
+            System.out.println(absline.title().getText()+ " Daily");
             Thread.sleep(2000);
             Actions actions = new Actions(driver);
             actions.moveToElement(absline.TabFinal()).click().build().perform();
@@ -180,13 +180,14 @@ public class TurkeyABS202_Test extends Base {
         }
     }
     @Test(priority = 5)
+
     public void TInsertion_Weekly_Success() throws InterruptedException {
         LeftMenu leftmenu = new LeftMenu(driver);
         ABSLines absline = new ABSLines(driver);
         Thread.sleep(2000);
         try {
 
-            System.out.println(absline.title20().getText()+ " Weekly");
+            System.out.println(absline.title().getText()+ " Weekly");
             Thread.sleep(2000);
             absline.PeriodFilter().click();
             Thread.sleep(2000);
@@ -231,7 +232,7 @@ public class TurkeyABS202_Test extends Base {
         Thread.sleep(2000);
         try {
 
-            System.out.println(absline.title20().getText()+ " Weekly");
+            System.out.println(absline.title().getText()+ " Weekly");
             Thread.sleep(2000);
             absline.PeriodFilter().click();
             Thread.sleep(2000);
@@ -275,7 +276,7 @@ public class TurkeyABS202_Test extends Base {
         Thread.sleep(2000);
         try {
 
-            System.out.println(absline.title20().getText()+ " Weekly");
+            System.out.println(absline.title().getText()+ " Weekly");
             Thread.sleep(2000);
             absline.PeriodFilter().click();
             Thread.sleep(2000);
@@ -313,13 +314,12 @@ public class TurkeyABS202_Test extends Base {
     }
     @Test(priority = 8)
     public void Final_Weekly_Success() throws InterruptedException {
-
         LeftMenu leftmenu = new LeftMenu(driver);
         ABSLines absline = new ABSLines(driver);
         Thread.sleep(2000);
         try {
 
-            System.out.println(absline.title20().getText() + " Weekly");
+            System.out.println(absline.title().getText() + " Weekly");
             Thread.sleep(2000);
             absline.PeriodFilter().click();
             Thread.sleep(2000);
@@ -342,9 +342,9 @@ public class TurkeyABS202_Test extends Base {
             Integer totalproduction = Integer.parseInt(absline.TotalProduction().getText());
             System.out.println("Total Production "+totalproduction+"\n");
 
-                        if (totalproduction == 0) {
+            if (totalproduction == 0) {
                 Assert.fail("No Production");
-            System.out.println("Production is NOK");
+                System.out.println("Production is NOK");
             }
             else{
                 System.out.println("Production is OK");

@@ -27,7 +27,7 @@ public class TurkeyABS208_Test extends Base {
             Actions actions = new Actions(driver);
             actions.moveToElement(leftmenu.ABS208()).click().build().perform();
             Thread.sleep(2000);
-            System.out.println(absline.title20().getText()+ " Daily");
+            System.out.println(absline.title().getText()+ " Daily");
             Thread.sleep(2000);
             actions.moveToElement(absline.TabTInsertion()).click().build().perform();
 
@@ -66,7 +66,7 @@ public class TurkeyABS208_Test extends Base {
         ABSLines absline = new ABSLines(driver);
         Thread.sleep(2000);
         try {
-            System.out.println(absline.title20().getText()+ " Daily");
+            System.out.println(absline.title().getText()+ " Daily");
             Thread.sleep(2000);
             Actions actions = new Actions(driver);
             actions.moveToElement(absline.TabWinding()).click().build().perform();
@@ -105,7 +105,7 @@ public class TurkeyABS208_Test extends Base {
         ABSLines absline = new ABSLines(driver);
         Thread.sleep(2000);
         try {
-            System.out.println(absline.title20().getText()+ " Daily");
+            System.out.println(absline.title().getText()+ " Daily");
             Thread.sleep(2000);
             Actions actions = new Actions(driver);
             actions.moveToElement(absline.TabCase()).click().build().perform();
@@ -144,7 +144,7 @@ public class TurkeyABS208_Test extends Base {
         ABSLines absline = new ABSLines(driver);
         Thread.sleep(2000);
         try {
-            System.out.println(absline.title20().getText()+ " Daily");
+            System.out.println(absline.title().getText()+ " Daily");
             Thread.sleep(2000);
             Actions actions = new Actions(driver);
             actions.moveToElement(absline.TabFinal()).click().build().perform();
@@ -177,12 +177,13 @@ public class TurkeyABS208_Test extends Base {
         }
     }
     @Test(priority = 5)
+
     public void TInsertion_Weekly_Success() throws InterruptedException {
         LeftMenu leftmenu = new LeftMenu(driver);
         ABSLines absline = new ABSLines(driver);
         Thread.sleep(2000);
         try {
-            System.out.println(absline.title20().getText()+ " Weekly");
+            System.out.println(absline.title().getText()+ " Weekly");
             Thread.sleep(2000);
             absline.PeriodFilter().click();
             Thread.sleep(2000);
@@ -226,7 +227,7 @@ public class TurkeyABS208_Test extends Base {
         ABSLines absline = new ABSLines(driver);
         Thread.sleep(2000);
         try {
-            System.out.println(absline.title20().getText()+ " Weekly");
+            System.out.println(absline.title().getText()+ " Weekly");
             Thread.sleep(2000);
             absline.PeriodFilter().click();
             Thread.sleep(2000);
@@ -269,7 +270,7 @@ public class TurkeyABS208_Test extends Base {
         ABSLines absline = new ABSLines(driver);
         Thread.sleep(2000);
         try {
-            System.out.println(absline.title20().getText()+ " Weekly");
+            System.out.println(absline.title().getText()+ " Weekly");
             Thread.sleep(2000);
             absline.PeriodFilter().click();
             Thread.sleep(2000);
@@ -312,7 +313,7 @@ public class TurkeyABS208_Test extends Base {
         ABSLines absline = new ABSLines(driver);
         Thread.sleep(2000);
         try {
-            System.out.println(absline.title20().getText()+ " Weekly");
+            System.out.println(absline.title().getText()+ " Weekly");
             Thread.sleep(2000);
             absline.PeriodFilter().click();
             Thread.sleep(2000);

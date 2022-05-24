@@ -4,18 +4,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 
-public class
-ABSLines {
+public class ABSLines {
 
     WebDriver driver;
     public ABSLines(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(this.driver, this);
     }
-    By title20 = By.xpath("//h2[contains(text(),'TURKEY')]");
-    public WebElement title20() {return  driver.findElement(title20);}
+    By title = By.xpath("//h2[contains(text(),'TURKEY')]");
+    public WebElement title() {return  driver.findElement(title);}
 
     By tabtinsertion = By.linkText("T. INSERTION");
     public WebElement TabTInsertion() {return driver.findElement(tabtinsertion);}

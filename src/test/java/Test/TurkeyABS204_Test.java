@@ -10,15 +10,11 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class TurkeyABS204_Test extends Base {
-    /*  @BeforeTest
-	@FindBy(css="")
-	private WebElement webElement;
-	@FindBy(css="")
-	private WebElement webElement;
-      public void beforemethod(){
-          super.beforemethod();
-          super.loginmethod();
-      }*/
+    @BeforeTest
+    public void beforemethod(){
+         super.beforemethod();
+         super.loginmethod();
+    }
     @Test(priority = 1)
     public void TInsertion_Daily_Success() throws InterruptedException {
         LeftMenu leftmenu = new LeftMenu(driver);
@@ -29,7 +25,7 @@ public class TurkeyABS204_Test extends Base {
             Thread.sleep(2000);
             leftmenu.ABS204().click();
             Thread.sleep(2000);
-            System.out.println(absline.title20().getText()+ " Daily");
+            System.out.println(absline.title().getText()+ " Daily");
             Thread.sleep(2000);
             absline.TabTInsertion().click();
             Thread.sleep(3000);
@@ -69,7 +65,7 @@ public class TurkeyABS204_Test extends Base {
         ABSLines absline = new ABSLines(driver);
         Thread.sleep(2000);
         try {
-            System.out.println(absline.title20().getText()+ " Daily");
+            System.out.println(absline.title().getText()+ " Daily");
             Thread.sleep(2000);
             Actions actions = new Actions(driver);
             actions.moveToElement(absline.TabWinding()).click().build().perform();
@@ -108,7 +104,7 @@ public class TurkeyABS204_Test extends Base {
         ABSLines absline = new ABSLines(driver);
         Thread.sleep(2000);
         try {
-            System.out.println(absline.title20().getText()+ " Daily");
+            System.out.println(absline.title().getText()+ " Daily");
             Thread.sleep(2000);
             Actions actions = new Actions(driver);
             actions.moveToElement(absline.TabCaseAssembly()).click().build().perform();
@@ -147,7 +143,7 @@ public class TurkeyABS204_Test extends Base {
         ABSLines absline = new ABSLines(driver);
         Thread.sleep(2000);
         try {
-            System.out.println(absline.title20().getText()+ " Daily");
+            System.out.println(absline.title().getText()+ " Daily");
             Thread.sleep(2000);
             Actions actions = new Actions(driver);
             actions.moveToElement(absline.TabFinal()).click().build().perform();
@@ -179,13 +175,14 @@ public class TurkeyABS204_Test extends Base {
             Assert.fail("fail");
         }
     }
+
     @Test(priority = 5)
     public void TInsertion_Weekly_Success() throws InterruptedException {
         LeftMenu leftmenu = new LeftMenu(driver);
         ABSLines absline = new ABSLines(driver);
         Thread.sleep(2000);
         try {
-            System.out.println(absline.title20().getText()+ " Weekly");
+            System.out.println(absline.title().getText()+ " Weekly");
             Thread.sleep(2000);
             absline.PeriodFilter().click();
             Thread.sleep(2000);
@@ -229,7 +226,7 @@ public class TurkeyABS204_Test extends Base {
         ABSLines absline = new ABSLines(driver);
         Thread.sleep(2000);
         try {
-            System.out.println(absline.title20().getText()+ " Weekly");
+            System.out.println(absline.title().getText()+ " Weekly");
             Thread.sleep(2000);
             absline.PeriodFilter().click();
             Thread.sleep(2000);
@@ -272,7 +269,7 @@ public class TurkeyABS204_Test extends Base {
         ABSLines absline = new ABSLines(driver);
         Thread.sleep(2000);
         try {
-            System.out.println(absline.title20().getText()+ " Weekly");
+            System.out.println(absline.title().getText()+ " Weekly");
             Thread.sleep(2000);
             absline.PeriodFilter().click();
             Thread.sleep(2000);
@@ -315,7 +312,7 @@ public class TurkeyABS204_Test extends Base {
         ABSLines absline = new ABSLines(driver);
         Thread.sleep(2000);
         try {
-            System.out.println(absline.title20().getText() + " Weekly");
+            System.out.println(absline.title().getText() + " Weekly");
             Thread.sleep(2000);
             absline.PeriodFilter().click();
             Thread.sleep(2000);
